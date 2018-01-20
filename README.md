@@ -1,6 +1,16 @@
-# PlayCentre
+# PlayCentre 
+###Alpha version
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.4.
+Music application on Angular.
+
+## Table of Contents
+
+* [Development server](#development-server)
+* [Code scaffolding](#code-scaffolding)
+* [Build](#build)
+* [Running unit tests](#running-unit-tests)
+* [Running end-to-end tests](#running-end-to-end-tests)
+* [Further help](#further-help)
 
 ## Development server
 
