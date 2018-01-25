@@ -1,20 +1,87 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<mdc-toolbar
+  [flexible]="isFlexible"
+  [fixed]="isFixed"
+  [waterfall]="isWaterfall"
+  [fixedLastrow]="isFixedLastRow"
+  [mdc-elevation]="5">
+  <mdc-toolbar-row>
+    <mdc-toolbar-section [alignStart]="true">
+      <a href="#" class="material-icons mdc-toolbar__menu-icon">menu</a>
+      <mdc-toolbar-title>PlayCentre</mdc-toolbar-title>
+    </mdc-toolbar-section>
+    <mdc-toolbar-section [alignEnd]="true">
+      <i class="material-icons">account_circle</i>
+      <span class="login-title">Login</span>
+    </mdc-toolbar-section>
+  </mdc-toolbar-row>
+</mdc-toolbar>
 
+<div fxlayout="row" style="flex-direction: row; box-sizing: border-box; display: flex;">
+  <mdc-drawer-permanent fxhide="" fxshow.gt-sm="true" class="mdc-drawer--permanent ng-mdc-drawer--permanent--fixed" role="navigation" style="display: block;">
+   <mdc-drawer-content class="mdc-drawer__content">
+      <mdc-list-group class="mdc-list-group">
+        <mdc-list class="mdc-list" role="list">
+          <mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-15" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
+            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">home</mdc-icon>Home
+          </mdc-list-item>
+          <mdc-list-divider><div class="mdc-list-divider" role="seperator"></div></mdc-list-divider>
+          <mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-16" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
+            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">touch_app</mdc-icon>Getting Started
+          </mdc-list-item>
+          <mdc-list-divider><div class="mdc-list-divider" role="seperator"></div></mdc-list-divider>
+          <mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-17" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
+            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">keyboard_arrow_right</mdc-icon>Core Modules
+          </mdc-list-item>
+          <mdc-list-divider><div class="mdc-list-divider" role="seperator"></div></mdc-list-divider>
+          <!----><mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-18" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
+            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">adjust</mdc-icon>Buttons
+          </mdc-list-item><mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-19" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
+            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">credit_card</mdc-icon>Card
+          </mdc-list-item><mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-20" class="mdc-list-item mdc-ripple-upgraded mdc-ripple-upgraded--foreground-activation" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891; --mdc-ripple-fg-translate-start:124.3px, -57.7px; --mdc-ripple-fg-translate-end:47.8px, -47.7px;">
+            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">question_answer</mdc-icon>Dialog
+          </mdc-list-item><mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-21" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
+            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">code</mdc-icon>Drawer
+          </mdc-list-item><mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-22" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
+            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">star</mdc-icon>Icon
+          </mdc-list-item><mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-23" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
+            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">input</mdc-icon>Inputs and Controls
+          </mdc-list-item><mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-24" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
+            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">compare_arrows</mdc-icon>Linear-Progress
+          </mdc-list-item><mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-25" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
+            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">list</mdc-icon>List
+          </mdc-list-item><mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-26" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
+            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">menu</mdc-icon>Menu
+          </mdc-list-item><mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-27" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
+            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">info_outline</mdc-icon>Snackbar
+          </mdc-list-item><mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-28" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
+            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">tab</mdc-icon>Tabs
+          </mdc-list-item><mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-29" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
+            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">remove</mdc-icon>Toolbar
+          </mdc-list-item>
+        </mdc-list>
+      </mdc-list-group>
+    </mdc-drawer-content>
+  </mdc-drawer-permanent>
+
+  <div class="mdc-content">
+   <div fxlayout="column" style="flex-direction: column; box-sizing: border-box; display: flex;">
+  <div class="demo-landing mdc-elevation--z2" fxlayout="column" fxlayoutalign="center center" style="flex-direction: column; box-sizing: border-box; display: flex; max-width: 100%; place-content: center; align-items: center;">
+    <h1 mdc-typography-display3="" style="margin: 0.5em;" class="mdc-typography--display3">Angular</h1>
+    <h2 fxhide.xs="true" fxshow="" mdc-typography-adjust-margin="" mdc-typography-display2="" style="display: block;" class="mdc-typography--adjust-margin mdc-typography--display2">Material Components</h2>
+    <span fxhide="" fxshow.xs="true" mdc-typography-adjust-margin="" mdc-typography-display1="" style="display: none;" class="mdc-typography--adjust-margin mdc-typography--display1">Material Components</span>
+  </div>
+  <div class="mdc-padding" fxlayout="column" fxlayoutalign="center center" style="flex-direction: column; box-sizing: border-box; display: flex; max-width: 100%; place-content: center; align-items: center;">
+    <mdc-card class="demo-landing-card mdc-card" fxlayout="column" fxlayoutalign="center center" style="flex-direction: column; box-sizing: border-box; display: flex; max-width: 100%; place-content: center; align-items: center;">
+      <mdc-card-supporting-text mdc-typography-subheading2="" class="mdc-card__supporting-text mdc-typography--subheading2">
+        A faithful and accurate representation of Material Design as envisioned on the web by Google's Material Design team.
+      </mdc-card-supporting-text>
+      <button fxflexoffset="25px" mdc-button="" tabindex="0" style="margin-top: 25px; --mdc-ripple-fg-size:76.275px; --mdc-ripple-fg-scale:1.86331;" class="mdc-button mdc-button--raised mdc-button--secondary mdc-ripple-upgraded">Get Started</button>
+    </mdc-card>
+  </div>
+  <div fxflexoffset="40px" fxlayout="column" fxlayoutalign="center center" mdc-typography-caption="" style="margin-top: 40px; flex-direction: column; box-sizing: border-box; display: flex; max-width: 100%; place-content: center; align-items: center;" class="mdc-typography--caption">
+    <span>angular-mdc-web v0.7.0</span>
+    <span>material-components-web v0.28.0</span>
+  </div>
+</div>
+  </div>
+</div>
