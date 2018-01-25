@@ -10,13 +10,15 @@
       <mdc-toolbar-title>PlayCentre</mdc-toolbar-title>
     </mdc-toolbar-section>
     <mdc-toolbar-section [alignEnd]="true">
-      <i class="material-icons">account_circle</i>
-      <span class="login-title">Login</span>
+      <div class="account-box">
+        <i class="material-icons mdc-account_circle-icon">account_circle</i>
+        <span class="login-title">Login</span>
+      </div>
     </mdc-toolbar-section>
   </mdc-toolbar-row>
 </mdc-toolbar>
 
-<div fxlayout="row" style="flex-direction: row; box-sizing: border-box; display: flex;">
+<div class="content" fxlayout="row" style="flex-direction: row; box-sizing: border-box; display: flex;">
   <mdc-drawer-permanent fxhide="" fxshow.gt-sm="true" class="mdc-drawer--permanent ng-mdc-drawer--permanent--fixed" role="navigation" style="display: block;">
    <mdc-drawer-content class="mdc-drawer__content">
       <mdc-list-group class="mdc-list-group">
@@ -25,39 +27,6 @@
             <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">home</mdc-icon>Home
           </mdc-list-item>
           <mdc-list-divider><div class="mdc-list-divider" role="seperator"></div></mdc-list-divider>
-          <mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-16" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
-            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">touch_app</mdc-icon>Getting Started
-          </mdc-list-item>
-          <mdc-list-divider><div class="mdc-list-divider" role="seperator"></div></mdc-list-divider>
-          <mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-17" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
-            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">keyboard_arrow_right</mdc-icon>Core Modules
-          </mdc-list-item>
-          <mdc-list-divider><div class="mdc-list-divider" role="seperator"></div></mdc-list-divider>
-          <!----><mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-18" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
-            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">adjust</mdc-icon>Buttons
-          </mdc-list-item><mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-19" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
-            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">credit_card</mdc-icon>Card
-          </mdc-list-item><mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-20" class="mdc-list-item mdc-ripple-upgraded mdc-ripple-upgraded--foreground-activation" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891; --mdc-ripple-fg-translate-start:124.3px, -57.7px; --mdc-ripple-fg-translate-end:47.8px, -47.7px;">
-            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">question_answer</mdc-icon>Dialog
-          </mdc-list-item><mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-21" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
-            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">code</mdc-icon>Drawer
-          </mdc-list-item><mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-22" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
-            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">star</mdc-icon>Icon
-          </mdc-list-item><mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-23" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
-            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">input</mdc-icon>Inputs and Controls
-          </mdc-list-item><mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-24" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
-            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">compare_arrows</mdc-icon>Linear-Progress
-          </mdc-list-item><mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-25" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
-            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">list</mdc-icon>List
-          </mdc-list-item><mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-26" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
-            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">menu</mdc-icon>Menu
-          </mdc-list-item><mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-27" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
-            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">info_outline</mdc-icon>Snackbar
-          </mdc-list-item><mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-28" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
-            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">tab</mdc-icon>Tabs
-          </mdc-list-item><mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-29" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
-            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">remove</mdc-icon>Toolbar
-          </mdc-list-item>
         </mdc-list>
       </mdc-list-group>
     </mdc-drawer-content>
@@ -85,3 +54,5 @@
 </div>
   </div>
 </div>
+
+<div class="player-container"></div>
