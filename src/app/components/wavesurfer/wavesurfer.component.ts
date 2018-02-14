@@ -8,17 +8,18 @@ import * as WaveSurfer from 'wavesurfer.js';
     styleUrls: ['wavesurfer.component.sass']
 })
 export class WaveSurferComponent implements OnInit {
+  public wavesurfer;
 
+  onPlay(event) {
+    this.wavesurfer.playPause();
+  }
 
-    ngOnInit() {
-        const wavesurfer = WaveSurfer.create({
-            container: '.player-container',
-            waveColor: '#a6c8fc',
-            progressColor: '#fff'
-        });
-        wavesurfer.load('./../assets/audio/test.mp3');
-        wavesurfer.on('ready', function () {
-            wavesurfer.play();
-          });
-    }
+  ngOnInit() {
+    this.wavesurfer = WaveSurfer.create({
+      container: '.player-container',
+      waveColor: '#a6c8fc',
+      progressColor: '#fff'
+    });
+    this.wavesurfer.load('./../assets/audio/test.mp3');
+  }
 }
