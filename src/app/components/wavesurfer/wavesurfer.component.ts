@@ -9,6 +9,7 @@ import * as WaveSurfer from 'wavesurfer.js';
 })
 export class WaveSurferComponent implements OnInit {
 
+
     ngOnInit() {
         const wavesurfer = WaveSurfer.create({
             container: '.player-container',
@@ -16,8 +17,8 @@ export class WaveSurferComponent implements OnInit {
             progressColor: '#fff'
         });
         wavesurfer.load('./../assets/audio/test.mp3');
-        /*wavesurfer.on('ready', function () {
+        wavesurfer.on('ready', function () {
             wavesurfer.play();
-          });*/
+          });
     }
 }
