@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  status: boolean = false;
+
+  onDrawerClick(event) {
+    if (this.status == true) {
+      this.status = false;
+    } else {
+      this.status = true;
+    }
+  }
 }

@@ -12,6 +12,7 @@ import { MdcElevationModule, MdcDrawerModule, MdcListModule, MdcCardModule } fro
 
 import { AppComponent } from './app.component';
 import { WaveSurferComponent } from './components/wavesurfer/wavesurfer.component';
+import { PlaylistComponent } from './components/playlist/playlist.component';
 /*
 requestAnimationFrame(() => {
 
@@ -28,7 +29,8 @@ requestAnimationFrame(() => {
 @NgModule({
   declarations: [
     AppComponent,
-    WaveSurferComponent
+    WaveSurferComponent,
+    PlaylistComponent
   ],
   imports: [
     BrowserModule,

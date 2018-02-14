@@ -6,7 +6,12 @@
   [mdc-elevation]="5">
   <mdc-toolbar-row>
     <mdc-toolbar-section [alignStart]="true">
-      <a href="#" class="material-icons mdc-toolbar__menu-icon">menu</a>
+      <a
+        href="#"
+        class="material-icons mdc-toolbar__menu-icon"
+        (click)="onDrawerClick($event)" role="navigation" style="display: block;">
+        menu
+      </a>
       <mdc-toolbar-title>PlayCentre</mdc-toolbar-title>
     </mdc-toolbar-section>
     <mdc-toolbar-section [alignEnd]="true">
@@ -19,7 +24,10 @@
 </mdc-toolbar>
 
 <div class="content" fxlayout="row" style="flex-direction: row; box-sizing: border-box; display: flex;">
-  <mdc-drawer-permanent fxhide="" fxshow.gt-sm="true" class="mdc-drawer--permanent ng-mdc-drawer--permanent--fixed" role="navigation" style="display: block;">
+  <mdc-drawer-persistent fxhide=""
+                         fxshow.gt-sm="true"
+                         class="ng-mdc-drawer--persistent--fixed mdc-elevation--z5"
+                         [ngClass]="status ? 'mdc-drawer--open' : 'mdc-drawer--persistent'">
    <mdc-drawer-content class="mdc-drawer__content">
       <mdc-list-group class="mdc-list-group">
         <mdc-list class="mdc-list" role="list">
@@ -30,28 +38,10 @@
         </mdc-list>
       </mdc-list-group>
     </mdc-drawer-content>
-  </mdc-drawer-permanent>
+  </mdc-drawer-persistent>
 
   <div class="mdc-content">
-   <div fxlayout="column" style="flex-direction: column; box-sizing: border-box; display: flex;">
-  <div class="demo-landing mdc-elevation--z2" fxlayout="column" fxlayoutalign="center center" style="flex-direction: column; box-sizing: border-box; display: flex; max-width: 100%; place-content: center; align-items: center;">
-    <h1 mdc-typography-display3="" style="margin: 0.5em;" class="mdc-typography--display3">Angular</h1>
-    <h2 fxhide.xs="true" fxshow="" mdc-typography-adjust-margin="" mdc-typography-display2="" style="display: block;" class="mdc-typography--adjust-margin mdc-typography--display2">Material Components</h2>
-    <span fxhide="" fxshow.xs="true" mdc-typography-adjust-margin="" mdc-typography-display1="" style="display: none;" class="mdc-typography--adjust-margin mdc-typography--display1">Material Components</span>
-  </div>
-  <div class="mdc-padding" fxlayout="column" fxlayoutalign="center center" style="flex-direction: column; box-sizing: border-box; display: flex; max-width: 100%; place-content: center; align-items: center;">
-    <mdc-card class="demo-landing-card mdc-card" fxlayout="column" fxlayoutalign="center center" style="flex-direction: column; box-sizing: border-box; display: flex; max-width: 100%; place-content: center; align-items: center;">
-      <mdc-card-supporting-text mdc-typography-subheading2="" class="mdc-card__supporting-text mdc-typography--subheading2">
-        A faithful and accurate representation of Material Design as envisioned on the web by Google's Material Design team.
-      </mdc-card-supporting-text>
-      <button fxflexoffset="25px" mdc-button="" tabindex="0" style="margin-top: 25px; --mdc-ripple-fg-size:76.275px; --mdc-ripple-fg-scale:1.86331;" class="mdc-button mdc-button--raised mdc-button--secondary mdc-ripple-upgraded">Get Started</button>
-    </mdc-card>
-  </div>
-  <div fxflexoffset="40px" fxlayout="column" fxlayoutalign="center center" mdc-typography-caption="" style="margin-top: 40px; flex-direction: column; box-sizing: border-box; display: flex; max-width: 100%; place-content: center; align-items: center;" class="mdc-typography--caption">
-    <span>angular-mdc-web v0.7.0</span>
-    <span>material-components-web v0.28.0</span>
-  </div>
-</div>
+    <playlist></playlist>
   </div>
 
 </div>
