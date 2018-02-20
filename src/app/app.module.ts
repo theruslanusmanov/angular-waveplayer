@@ -1,30 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 // Imports of MDC Angular components
 import {
   MdcButtonModule,
   MdcFabModule,
+  MdcToolbarModule,
+  MdcIconModule,
+  MdcElevationModule,
+  MdcDrawerModule,
+  MdcListModule,
+  MdcCardModule
 } from '@angular-mdc/web';
-import { MdcToolbarModule, MdcIconModule } from '@angular-mdc/web';
-import { MdcElevationModule, MdcDrawerModule, MdcListModule, MdcCardModule } from '@angular-mdc/web';
 
+// App imports
 import { AppComponent } from './app.component';
 import { WaveSurferComponent } from './components/wavesurfer/wavesurfer.component';
 import { PlaylistComponent } from './components/playlist/playlist.component';
-/*
-requestAnimationFrame(() => {
-
-  const wavesurfer = WaveSurfer.create({
-    container: '.player-container',
-    waveColor: '#a6c8fc',
-    progressColor: '#fff'
-  });
-  wavesurfer.load('./../assets/audio/test.mp3');
-  wavesurfer.playPause();
-});
-*/
+import { PlaylistService } from './services/playlist.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +36,9 @@ requestAnimationFrame(() => {
     MdcListModule,
     MdcCardModule
   ],
-  providers: [],
+  providers: [
+    PlaylistService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,20 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 
 import * as WaveSurfer from 'wavesurfer.js';
+import { Playlist } from '../../services/playlist';
+import { PlaylistService } from '../../services/playlist.service';
 
 @Component({
-    selector: 'wave-surfer',
-    templateUrl: 'wavesurfer.component.html',
-    styleUrls: ['wavesurfer.component.sass']
+  moduleId: module.id,
+  selector: 'wave-surfer',
+  templateUrl: 'wavesurfer.component.html',
+  styleUrls: ['wavesurfer.component.sass']
 })
 export class WaveSurferComponent implements OnInit {
-  public wavesurfer;
+  private wavesurfer: WaveSurfer;
+  private activeMusic: Playlist;
+  private playlist: Playlist[];
 
-  onPlay(event) {
+  constructor(private playlistService: PlaylistService) { }
+
+  private getPlaylist(): void {
+    this.playlistService.getPlaylist().subscribe(playlist => this.playlist = playlist);
+  }
+
+  private onPlay(event) {
     this.wavesurfer.playPause();
   }
 
   ngOnInit() {
+    this.getPlaylist();
     this.wavesurfer = WaveSurfer.create({
       container: '.player-container',
       waveColor: '#a6c8fc',
