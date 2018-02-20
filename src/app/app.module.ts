@@ -10,7 +10,7 @@ import {
   MdcElevationModule,
   MdcDrawerModule,
   MdcListModule,
-  MdcCardModule
+  MdcCardModule,
 } from '@angular-mdc/web';
 
 // App imports

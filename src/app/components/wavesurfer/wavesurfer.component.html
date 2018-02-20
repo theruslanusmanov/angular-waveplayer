@@ -1,6 +1,8 @@
 <div class="play-controls">
-  <i class="material-icons">skip_previous</i>
-  <i class="material-icons" (click)="onPlay($event)">play_arrow</i>
-  <i class="material-icons">skip_next</i>
+  <div class="album-box"></div>
+  <i class="material-icons" (click)="onPreviousButton($event)">skip_previous</i>
+  <i class="material-icons" (click)="onPlayButton($event)">play_arrow</i>
+  <i class="material-icons" (click)="onNextButton($event)">skip_next</i>
+  <div class="active-music-name">{{ activeMusic.name }}</div>
 </div>
 <div class="player-container"></div>

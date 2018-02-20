@@ -13,6 +13,7 @@ import { PlaylistService } from '../../services/playlist.service';
 export class WaveSurferComponent implements OnInit {
   private wavesurfer: WaveSurfer;
   private activeMusic: Playlist;
+  private activeMusicId = 0;
   private playlist: Playlist[];
 
   constructor(private playlistService: PlaylistService) { }
@@ -21,7 +22,23 @@ export class WaveSurferComponent implements OnInit {
     this.playlistService.getPlaylist().subscribe(playlist => this.playlist = playlist);
   }
 
-  private onPlay(event) {
+  private onPreviousButton(event) {
+    this.activeMusicId--;
+    this.musicUpdate();
+  }
+
+  private onPlayButton(event) {
+    this.wavesurfer.playPause();
+  }
+
+  private onNextButton(event) {
+    this.activeMusicId++;
+    this.musicUpdate();
+    console.log(this.activeMusicId);
+  }
+
+  private musicUpdate() {
+    this.wavesurfer.load(this.activeMusic.url);
     this.wavesurfer.playPause();
   }
 
@@ -32,6 +49,8 @@ export class WaveSurferComponent implements OnInit {
       waveColor: '#a6c8fc',
       progressColor: '#fff'
     });
-    this.wavesurfer.load('./../assets/audio/test.mp3');
+    this.activeMusic = this.playlist[this.activeMusicId];
+    console.log(this.activeMusicId);
+    this.wavesurfer.load(this.activeMusic.url);
   }
 }

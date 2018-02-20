@@ -24,9 +24,9 @@
 </mdc-toolbar>
 
 <div class="content" fxlayout="row" style="flex-direction: row; box-sizing: border-box; display: flex;">
-  <mdc-drawer-persistent fxhide=""
+  <mdc-drawer fxhide=""
                          fxshow.gt-sm="true"
-                         class="ng-mdc-drawer--persistent--fixed mdc-elevation--z5"
+                         class="ng-mdc-drawer--persistent--fixed mdc-elevation--z24"
                          [ngClass]="status ? 'mdc-drawer--open' : 'mdc-drawer--persistent'">
    <mdc-drawer-content class="mdc-drawer__content">
       <mdc-list-group class="mdc-list-group">
@@ -38,7 +38,7 @@
         </mdc-list>
       </mdc-list-group>
     </mdc-drawer-content>
-  </mdc-drawer-persistent>
+  </mdc-drawer>
 
   <div class="mdc-content">
     <playlist></playlist>

@@ -1,6 +1,12 @@
 .mdc-account_circle-icon
   color: #a6c8fc
 
+.material-icons
+  color: #FFFFFF
+  font-size: 16pt
+  cursor: pointer
+  padding: 24px
+
 .account-box
   line-height: 1
   display: flex
@@ -16,15 +22,25 @@
 
 .mdc-content
   height: 100%
+  width: 100%
   align-items: stretch
   overflow: hidden
 
 .mdc-drawer__drawer
   border: none
 
+.mdc-drawer--persistent
+  display: none;
+
 .mdc-drawer--open
   width: 300px
-  background-color: #555
+
+.mdc-drawer--permanent
+  border-right: none
+
+.mdc-list-item
+  color: #FFF
+  padding: 0 24px
 
 ::ng-deep .player-container
   position: fixed
