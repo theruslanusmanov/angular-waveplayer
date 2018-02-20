@@ -59,5 +59,6 @@ export class WaveSurferComponent implements OnInit {
     this.activeMusic = this.playlist[this.activeMusicId];
     console.log(this.activeMusicId);
     this.wavesurfer.load(this.activeMusic.url);
+    // this.wavesurfer.empty();
   }
 }
