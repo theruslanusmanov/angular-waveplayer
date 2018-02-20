@@ -1,7 +1,11 @@
 <div class="play-controls">
   <div class="album-box"></div>
   <i class="material-icons" (click)="onPreviousButton($event)">skip_previous</i>
-  <i class="material-icons" (click)="onPlayButton($event)">play_arrow</i>
+  <i 
+    class="material-icons" 
+    [ngClass]="status ? 'pause-button' : 'play-button'"
+    (click)="onPlayButton($event)">
+  </i>
   <i class="material-icons" (click)="onNextButton($event)">skip_next</i>
   <div class="active-music-name">{{ activeMusic.name }}</div>
 </div>

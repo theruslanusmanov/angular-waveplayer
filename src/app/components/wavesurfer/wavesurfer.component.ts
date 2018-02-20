@@ -15,6 +15,7 @@ export class WaveSurferComponent implements OnInit {
   private activeMusic: Playlist;
   private activeMusicId = 0;
   private playlist: Playlist[];
+  private status = false;
 
   constructor(private playlistService: PlaylistService) { }
 
@@ -28,18 +29,23 @@ export class WaveSurferComponent implements OnInit {
   }
 
   private onPlayButton(event) {
+    this.status = !this.status;
     this.wavesurfer.playPause();
   }
 
   private onNextButton(event) {
     this.activeMusicId++;
     this.musicUpdate();
-    console.log(this.activeMusicId);
   }
 
   private musicUpdate() {
+    this.activeMusic = this.playlist[this.activeMusicId];
     this.wavesurfer.load(this.activeMusic.url);
-    this.wavesurfer.playPause();
+    if (this.status === true) {
+      this.wavesurfer.play();
+    } else {
+      this.wavesurfer.pause();
+    }
   }
 
   ngOnInit() {
@@ -47,7 +53,8 @@ export class WaveSurferComponent implements OnInit {
     this.wavesurfer = WaveSurfer.create({
       container: '.player-container',
       waveColor: '#a6c8fc',
-      progressColor: '#fff'
+      progressColor: '#fff',
+      backend: 'MediaElement'
     });
     this.activeMusic = this.playlist[this.activeMusicId];
     console.log(this.activeMusicId);
