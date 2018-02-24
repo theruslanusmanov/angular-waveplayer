@@ -52,7 +52,7 @@ export class WaveSurferComponent implements OnInit {
     this.getPlaylist();
     this.wavesurfer = WaveSurfer.create({
       container: '.player-container',
-      waveColor: '#a6c8fc',
+      waveColor: '#97C4D2',
       progressColor: '#fff',
       backend: 'MediaElement'
     });
