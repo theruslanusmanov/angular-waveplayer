@@ -12,7 +12,7 @@
         (click)="onDrawerClick($event)" role="navigation" style="display: block;">
         menu
       </a>
-      <mdc-toolbar-title><div class="logo"></div></mdc-toolbar-title>
+      <mdc-toolbar-title><span class="logo"><span class="first-part-logo">Play</span><span class="second-part-logo">Center</span></span></mdc-toolbar-title>
     </mdc-toolbar-section>
     <mdc-toolbar-section [alignEnd]="true">
       <div class="account-box">
@@ -32,9 +32,36 @@
       <mdc-list-group class="mdc-list-group">
         <mdc-list class="mdc-list" role="list">
           <mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-15" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
-            <mdc-icon mdc-list-item-graphic="" aria-hidden="true" class="material-icons mdc-list-item__graphic">home</mdc-icon>Home
+            <label><h2>Menu</h2></label>
           </mdc-list-item>
-          <mdc-list-divider><div class="mdc-list-divider" role="seperator"></div></mdc-list-divider>
+
+
+          <mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-15" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
+            <i class="material-icons">home</i>
+            <label><h3>Home</h3></label>
+          </mdc-list-item>
+
+          <mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-15" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
+            <i class="material-icons">settings</i>
+            <label><h3>Settings</h3></label>
+          </mdc-list-item>
+
+          <div class="divider"></div>
+
+          <mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-15" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
+            <label><h2>Theme</h2></label>
+          </mdc-list-item>
+
+          <mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-15" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
+            <label class="material-icons">brightness_medium</label>
+            <div class="mdc-switch">
+              <input type="checkbox" id="basic-switch" class="mdc-switch__native-control" />
+              <div class="mdc-switch__background">
+                <div class="mdc-switch__knob"></div>
+              </div>
+            </div>
+          </mdc-list-item>
+
         </mdc-list>
       </mdc-list-group>
     </mdc-drawer-content>
