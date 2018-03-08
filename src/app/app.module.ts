@@ -11,6 +11,7 @@ import {
   MdcDrawerModule,
   MdcListModule,
   MdcCardModule,
+  MdcTextFieldModule
 } from '@angular-mdc/web';
 
 // App imports
@@ -34,7 +35,8 @@ import { PlaylistService } from './services/playlist.service';
     MdcElevationModule,
     MdcDrawerModule,
     MdcListModule,
-    MdcCardModule
+    MdcCardModule,
+    MdcTextFieldModule
   ],
   providers: [
     PlaylistService
