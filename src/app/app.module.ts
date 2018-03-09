@@ -22,13 +22,13 @@ import { PlaylistComponent } from './components/playlist/playlist.component';
 import { PlaylistService } from './services/playlist.service';
 import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-
+import { PlayAppComponent } from './containers/play-app/play-app.component';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   {
     path: 'home',
-    component: AppComponent,
+    component: PlaylistComponent,
   },
   { path: '',
     redirectTo: '/home',
@@ -43,7 +43,8 @@ const appRoutes: Routes = [
     WaveSurferComponent,
     PlaylistComponent,
     LoginComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PlayAppComponent
   ],
   imports: [
     RouterModule.forRoot(
