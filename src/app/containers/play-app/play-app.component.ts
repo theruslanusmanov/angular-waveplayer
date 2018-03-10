@@ -11,6 +11,7 @@ export class PlayAppComponent implements OnInit {
   constructor() { }
 
   onDrawerClick(event) {
+    event.preventDefault();
     if (this.status === true) {
       this.status = false;
     } else {
