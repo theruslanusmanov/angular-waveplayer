@@ -25,12 +25,17 @@ import { PlaylistService } from './services/playlist.service';
 import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { PlayAppComponent } from './containers/play-app/play-app.component';
+import { SettingsComponent } from './components/settings/settings.component';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   {
     path: 'home',
     component: PlaylistComponent,
+  },
+  {
+    path: 'settings',
+    component: SettingsComponent,
   },
   { path: '',
     redirectTo: '/home',
@@ -46,7 +51,8 @@ const appRoutes: Routes = [
     PlaylistComponent,
     LoginComponent,
     PageNotFoundComponent,
-    PlayAppComponent
+    PlayAppComponent,
+    SettingsComponent
   ],
   imports: [
     RouterModule.forRoot(
