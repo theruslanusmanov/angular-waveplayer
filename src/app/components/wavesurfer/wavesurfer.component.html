@@ -1,13 +1,25 @@
 <div class="play-controls">
   <div class="album-box"></div>
   <i class="material-icons" (click)="onPreviousButton($event)">skip_previous</i>
-  <i 
-    class="material-icons" 
+  <i
+    class="material-icons"
     [ngClass]="status ? 'pause-button' : 'play-button'"
     (click)="onPlayButton($event)">
   </i>
   <i class="material-icons" (click)="onNextButton($event)">skip_next</i>
   <div class="active-music-name">{{ activeMusic.name }}</div>
+
+  <i class="material-icons">volume_up</i>
+  <mdc-slider
+    [min]="continuousMin"
+    [max]="continuousMax"
+    [value]="continuousValue"
+    [(ngModel)]="continuousModel"
+    [disabled]="continuousIsDisabled"
+    (input)="inputContinuousValue($event)">
+
+  </mdc-slider>
+
   <i class="material-icons icon-expand-more">expand_more</i>
 </div>
 <div class="player-container"></div>

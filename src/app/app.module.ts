@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 // Imports of MDC Angular components
 import {
@@ -12,7 +13,8 @@ import {
   MdcDrawerModule,
   MdcListModule,
   MdcCardModule,
-  MdcTextFieldModule
+  MdcTextFieldModule,
+  MdcSliderModule
 } from '@angular-mdc/web';
 
 // App imports
@@ -52,6 +54,7 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     ),
     BrowserModule,
+    FormsModule,
     MdcButtonModule,
     MdcFabModule,
     MdcToolbarModule,
@@ -60,7 +63,8 @@ const appRoutes: Routes = [
     MdcDrawerModule,
     MdcListModule,
     MdcCardModule,
-    MdcTextFieldModule
+    MdcTextFieldModule,
+    MdcSliderModule,
   ],
   providers: [
     PlaylistService

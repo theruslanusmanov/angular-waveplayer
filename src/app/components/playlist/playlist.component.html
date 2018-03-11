@@ -1,3 +1,8 @@
 <div class="playlist">
-  <div *ngFor="let music of playlist" class="music-section">{{ music.name }}</div>
+  <mdc-list #startend>
+    <mdc-list-item *ngFor="let music of playlist">
+      <mdc-icon mdc-list-item-graphic>play_arrow</mdc-icon>{{ music.name }}
+      <mdc-icon mdc-list-item-meta>more_vert</mdc-icon>
+    </mdc-list-item>
+  </mdc-list>
 </div>

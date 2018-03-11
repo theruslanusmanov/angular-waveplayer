@@ -3,8 +3,7 @@
     [flexible]="isFlexible"
     [fixed]="isFixed"
     [waterfall]="isWaterfall"
-    [fixedLastrow]="isFixedLastRow"
-    [mdc-elevation]="5">
+    [fixedLastrow]="isFixedLastRow">
     <mdc-toolbar-row>
       <mdc-toolbar-section [alignStart]="true">
         <a
@@ -27,19 +26,11 @@
   <div class="content" fxlayout="row" style="flex-direction: row; box-sizing: border-box; display: flex;">
     <mdc-drawer fxhide=""
                 fxshow.gt-sm="true"
-                class="ng-mdc-drawer--persistent--fixed mdc-elevation--z24"
+                class="ng-mdc-drawer--persistent--fixed"
                 [ngClass]="status ? 'mdc-drawer--open' : 'mdc-drawer--persistent'">
       <mdc-drawer-content class="mdc-drawer__content">
         <mdc-list-group class="mdc-list-group">
           <mdc-list class="mdc-list" role="list">
-
-            <mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-15" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
-              <div class="mdc-text-field">
-                <input type="text" id="my-text-field" class="mdc-text-field__input">
-                <label class="mdc-text-field__label" for="my-text-field">Hint text</label>
-                <div class="mdc-line-ripple"></div>
-              </div>
-            </mdc-list-item>
 
             <mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-15" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
               <label><h2>Menu</h2></label>
@@ -53,22 +44,6 @@
             <mdc-list-item routerLink="/settings" routerlinkactive="" tabindex="0" id="mdc-list-item-15" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
               <i class="material-icons">settings</i>
               <label><h3>Settings</h3></label>
-            </mdc-list-item>
-
-            <div class="divider"></div>
-
-            <mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-15" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
-              <label><h2>Theme</h2></label>
-            </mdc-list-item>
-
-            <mdc-list-item routerlinkactive="" tabindex="0" id="mdc-list-item-15" class="mdc-list-item mdc-ripple-upgraded" role="listitem" style="--mdc-ripple-fg-size:134.4px; --mdc-ripple-fg-scale:1.77891;">
-              <label class="material-icons">brightness_medium</label>
-              <div class="mdc-switch">
-                <input type="checkbox" id="basic-switch" class="mdc-switch__native-control" />
-                <div class="mdc-switch__background">
-                  <div class="mdc-switch__knob"></div>
-                </div>
-              </div>
             </mdc-list-item>
 
           </mdc-list>

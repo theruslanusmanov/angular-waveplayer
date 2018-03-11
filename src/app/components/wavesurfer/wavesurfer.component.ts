@@ -16,8 +16,19 @@ export class WaveSurferComponent implements OnInit {
   private activeMusicId = 0;
   private playlist: Playlist[];
   private status = false;
+  continuousIsDisabled: boolean = false;
+  continuousValue: number = 0;
+  continuousMin: number = 0;
+  continuousMax: number = 1;
+  continuousModel: number = 1;
+  volume = 1;
 
   constructor(private playlistService: PlaylistService) { }
+
+  inputContinuousValue(event: { source: any, value: any }) {
+    this.volume = event.value;
+    this.wavesurfer.setVolume(this.volume);
+  }
 
   private getPlaylist(): void {
     this.playlistService.getPlaylist().subscribe(playlist => this.playlist = playlist);
@@ -31,6 +42,7 @@ export class WaveSurferComponent implements OnInit {
   private onPlayButton(event) {
     this.status = !this.status;
     this.wavesurfer.playPause();
+    console.log(this.wavesurfer.getVolume());
   }
 
   private onNextButton(event) {
