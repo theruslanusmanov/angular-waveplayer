@@ -20,8 +20,8 @@ export class WaveSurferComponent implements OnInit {
   continuousValue: number = 0;
   continuousMin: number = 0;
   continuousMax: number = 1;
-  continuousModel: number = 1;
-  volume = 1;
+  continuousModel: number = 0;
+  volume = 0;
 
   constructor(private playlistService: PlaylistService) { }
 
