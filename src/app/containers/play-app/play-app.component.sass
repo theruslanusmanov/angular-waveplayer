@@ -21,15 +21,6 @@ a
 .mdc-toolbar__row
   min-height: 36px
 
-.mdc-list-item label
-  margin-right: 20px
-
-.mdc-list-item .material-icons
-  margin-right: 20px
-
-.mdc-list-item__graphic
-  margin-right: 20px
-
 .mdc-text-field
   color: #FFFFFF !important
 
@@ -38,9 +29,6 @@ a
 
 .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input
   color: #ffff
-
-.divider
-  margin-bottom: 40px
 
 .material-icons
   color: #000000
@@ -88,18 +76,31 @@ a
 .mdc-drawer--persistent
   display: none
 
-.mdc-drawer__content .material-icons
-  color: #333
+.mdc-drawer
+  padding: 32px 0 40px 24px
+
+  .mdc-drawer__content
+
+    .material-icons
+      color: #333
+      margin-right: 32px
+
+    .search-box
+      font-size: 24px
+      font-weight: 500
+      opacity: 0.4
+      display: flex
+
+      .mdc-search-icon
+        padding-top: 2px
+        font-size: 24px
+        font-weight: bold
 
 .mdc-drawer--open
   width: 300px
 
 .mdc-drawer--permanent
   border-right: none
-
-.mdc-list-item
-  color: #333
-  padding: 0 24px
 
 ::ng-deep .player-container
   position: fixed
