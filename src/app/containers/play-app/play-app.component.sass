@@ -5,8 +5,12 @@ a
   color: #474747
   text-decoration: none
 
+.mdc-toolbar__title
+    margin-left: -2px
+    margin-right: 0
+
 .logo
-  font-size: 14pt
+  font-size: 12pt
   color: #000000
   opacity: 0.7
 
@@ -69,6 +73,7 @@ a
   width: 100%
   align-items: stretch
   overflow: hidden
+  padding: 40px
 
 .mdc-drawer__drawer
   border: none
@@ -83,18 +88,34 @@ a
 
     .material-icons
       color: #333
-      margin-right: 32px
+      margin-right: 12px
 
     .search-box
-      font-size: 24px
+      font-size: 24pt
       font-weight: 500
       opacity: 0.4
       display: flex
 
       .mdc-search-icon
-        padding-top: 2px
-        font-size: 24px
+        padding-top: 4px
+        font-size: 24pt
         font-weight: bold
+
+    .navigation-box
+      margin: 32px 0 0 4px  
+      list-style: none
+
+      li
+        opacity: 0.7
+        margin-top: 20px
+
+      .navigation-element
+        font-size: 12pt
+        font-weight: 500
+
+      .navigation-element-active
+        opacity: 1
+        color: #000000
 
 .mdc-drawer--open
   width: 300px

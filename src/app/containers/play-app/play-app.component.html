@@ -30,6 +30,11 @@
                 [ngClass]="status ? 'mdc-drawer--open' : 'mdc-drawer--persistent'">
       <mdc-drawer-content class="mdc-drawer__content">
         <div class="search-box"><i class="material-icons mdc-search-icon">search</i>Search ...</div>
+        <ul class="navigation-box">
+          <li><a routerLink="/home" routerLinkActive="navigation-element-active" class="navigation-element">Home</a></li>
+          <li><a routerLink="/playlists" routerLinkActive="navigation-element-active" class="navigation-element">Playlists</a></li>
+          <li><a routerLink="/settings" routerLinkActive="navigation-element-active" class="navigation-element">Settings</a></li>
+        </ul>
       </mdc-drawer-content>
     </mdc-drawer>
 

@@ -27,6 +27,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { PlayAppComponent } from './containers/play-app/play-app.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { HomeComponent } from './components/home/home.components';
+import { PlaylistsComponent } from './components/playlists/playlists.components';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -36,10 +37,14 @@ const appRoutes: Routes = [
     component: PlaylistComponent,
   },
   */
- {
-  path: 'home',
-  component: HomeComponent,
-},
+  {
+    path: 'home',
+    component: HomeComponent,
+  },
+  {
+    path: 'playlists',
+    component: PlaylistsComponent,
+  },
   {
     path: 'settings',
     component: SettingsComponent,
@@ -60,7 +65,8 @@ const appRoutes: Routes = [
     PageNotFoundComponent,
     PlayAppComponent,
     SettingsComponent,
-    HomeComponent
+    HomeComponent,
+    PlaylistsComponent
   ],
   imports: [
     RouterModule.forRoot(
