@@ -1,2 +1,18 @@
 <div class="title">Playlists</div>
 <hr>
+<div class="content">
+    <div class="playlists" *ngFor="let playlist of playlists">
+        <div class="playlist">
+            <div class="box">
+                <div class="playlist-title">{{ playlist.name }}</div>
+            </div>
+        </div>
+    </div>
+    <div class="playlists">
+        <div class="playlist">
+            <div class="box playlist-add">
+                <i class="material-icons mdc-playlist_add-icon">playlist_add</i>
+            </div>
+        </div>
+    </div>
+</div>

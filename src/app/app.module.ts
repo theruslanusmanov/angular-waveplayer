@@ -28,6 +28,7 @@ import { PlayAppComponent } from './containers/play-app/play-app.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { HomeComponent } from './components/home/home.components';
 import { PlaylistsComponent } from './components/playlists/playlists.components';
+import { PlaylistsService } from './services/playlists.service';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -87,7 +88,8 @@ const appRoutes: Routes = [
     MdcSliderModule,
   ],
   providers: [
-    PlaylistService
+    PlaylistService,
+    PlaylistsService
   ],
   bootstrap: [AppComponent]
 })
