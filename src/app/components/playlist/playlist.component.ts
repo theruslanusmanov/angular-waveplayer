@@ -17,6 +17,10 @@ export class PlaylistComponent implements OnInit {
     this.playlistService.getPlaylist().subscribe(playlist => this.playlist = playlist);
   }
 
+  onMusic(event: Event): void {
+    console.log(event);
+  }
+
   ngOnInit() {
     this.getPlaylist();
   }

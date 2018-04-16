@@ -12,8 +12,13 @@
 <div class="playlist">
   <div>
       <div class="music-row" *ngFor="let music of playlist">
-          <div class="material-icons">play_arrow</div>
+          <div (click)="onMusic(music.id)" class="material-icons">play_arrow</div>
           <div class="music-name">{{ music.name }}</div>
+          <div class="music-author">{{ music.author }}</div>
+          <div class="music-year">{{ music.year }}</div>
+          <div class="music-genre">{{ music.genre }}</div>
+          <div class="music-time">{{ music.time }}</div>
+          <div class="music-storage-type">{{ music.storageType }}</div>
       </div>
   </div>
 </div>
