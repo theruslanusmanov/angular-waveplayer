@@ -43,6 +43,10 @@ const appRoutes: Routes = [
     component: PlaylistComponent,
   },
   {
+    path: 'playlists/:playlist-url',
+    component: PlaylistComponent,
+  },
+  {
     path: 'playlists',
     component: PlaylistsComponent,
   },

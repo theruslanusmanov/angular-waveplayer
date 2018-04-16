@@ -1,8 +1,18 @@
 .mdc-account_circle-icon
   color: #a6c8fc
 
-a
-  color: #474747
+::ng-deep .title
+  a
+    text-decoration: none
+    color: #000000
+    opacity: 0.4
+
+  a:hover
+    color: #39A5F1
+    opacity: 1
+
+::ng-deep a
+  color: #000000
   text-decoration: none
 
 .mdc-toolbar__title
@@ -102,7 +112,7 @@ a
         font-weight: bold
 
     .navigation-box
-      margin: 32px 0 0 4px  
+      margin: 32px 0 0 4px
       list-style: none
 
       li
