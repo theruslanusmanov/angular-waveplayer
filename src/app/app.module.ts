@@ -40,7 +40,7 @@ const appRoutes: Routes = [
   */
   {
     path: 'home',
-    component: HomeComponent,
+    component: PlaylistComponent,
   },
   {
     path: 'playlists',

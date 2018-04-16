@@ -1,9 +1,19 @@
+<div class="title">
+  <div class="old-title">Playlists</div>
+  <i class="material-icons old-title">navigate_next</i>
+  <div class="new-title">My Playlist</div>
+</div>
+<hr>
+<div class="filters">
+  <div class="shuffle-filter"><i class="material-icons">shuffle</i>Shuffle all (3)</div>
+  <div class="sort-by-filter"><i class="material-icons">reorder</i>Sort by: Date added</div>
+</div>
+<hr>
 <div class="playlist">
-  <mdc-list #startend>
-    <mdc-list-item *ngFor="let music of playlist">
-      <mdc-icon mdc-list-item-graphic>play_arrow</mdc-icon>{{ music.name }}
-      <i class="material-icons">star_border</i>
-      <mdc-icon mdc-list-item-meta>more_vert</mdc-icon>
-    </mdc-list-item>
-  </mdc-list>
+  <div>
+      <div class="music-row" *ngFor="let music of playlist">
+          <div class="material-icons">play_arrow</div>
+          <div class="music-name">{{ music.name }}</div>
+      </div>
+  </div>
 </div>
