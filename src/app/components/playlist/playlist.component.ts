@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { PlaylistService } from '../../services/playlist.service';
 import { Playlist } from '../../services/playlist';
 
@@ -17,8 +17,8 @@ export class PlaylistComponent implements OnInit {
     this.playlistService.getPlaylist().subscribe(playlist => this.playlist = playlist);
   }
 
-  onMusic(event: Event): void {
-    console.log(event);
+  onPlay(id) {
+    this.playlistService.emitChangeId(id);
   }
 
   ngOnInit() {

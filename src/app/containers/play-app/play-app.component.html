@@ -1,4 +1,5 @@
 <div class="play-app">
+
   <mdc-toolbar
     [flexible]="isFlexible"
     [fixed]="isFixed"
@@ -44,5 +45,12 @@
 
   </div>
 
-  <wave-surfer></wave-surfer>
+  <wave-surfer
+    [playlist]="playlist"
+    [playStatus]="playStatus"
+    [wavesurfer]="wavesurfer"
+    [activeMusic]="activeMusic"
+    [activeMusicId]="activeMusicId"
+  ></wave-surfer>
+
 </div>

@@ -1,5 +1,5 @@
 <div class="title">
-  <a routerLink="../" class="old-title">Playlists</a>
+  <a routerLink="./../" class="old-title">Playlists</a>
   <i class="material-icons old-title">navigate_next</i>
   <div class="new-title">My Playlist</div>
 </div>
@@ -12,7 +12,7 @@
 <div class="playlist">
   <div>
       <div class="music-row" *ngFor="let music of playlist">
-          <div (click)="onMusic(music.id)" class="material-icons">play_arrow</div>
+          <div (click)="onPlay(music.id)" class="material-icons">play_arrow</div>
           <div class="music-name">{{ music.name }}</div>
           <div class="music-author">{{ music.author }}</div>
           <div class="music-year">{{ music.year }}</div>
