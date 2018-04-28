@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import * as WaveSurfer from 'wavesurfer.js';
 
 @Component({
   moduleId: module.id,
@@ -13,6 +14,7 @@ export class WaveSurferComponent implements OnInit {
   @Input() playStatus;
   @Input() activeMusic;
   @Input() activeMusicId;
+  @Input() waveColor;
 
   constructor() { }
 
@@ -24,7 +26,6 @@ export class WaveSurferComponent implements OnInit {
   onPlayButton(event) {
     event.preventDefault();
     event.stopPropagation();
-    console.log(this.playStatus);
     if (this.playStatus === false) {
       this.playStatus = true;
       this.wavesurfer.play();
@@ -42,20 +43,11 @@ export class WaveSurferComponent implements OnInit {
   onPlayerClick(event) {
     event.preventDefault();
     event.stopPropagation();
-    console.log(this.playStatus);
     const time = this.wavesurfer.getDuration();
     const width = this.getPlayerWidth();
     const position = event.clientX;
     const currentTime = this.getCurrentTime(time, width, position);
-
-    if (!this.playStatus) {
-      this.playStatus = true;
-      this.wavesurfer.play(currentTime);
-    } else {
-      this.playStatus = false;
-      this.wavesurfer.pause();
-    }
-
+    this.wavesurfer.setCurrentTime(currentTime);
   }
 
   getPlayerWidth() {
@@ -81,13 +73,14 @@ export class WaveSurferComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.wavesurfer = this.wavesurfer.create({
+    this.wavesurfer = new WaveSurfer({
       height: '80',
       container: '.player-container',
-      waveColor: '#97C4D2',
+      waveColor: this.waveColor,
       progressColor: '#fff',
       backend: 'MediaElement'
     });
+    this.wavesurfer.init();
     this.wavesurfer.load(this.activeMusic.url);
   }
 }

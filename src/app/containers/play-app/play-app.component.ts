@@ -12,6 +12,7 @@ export class PlayAppComponent {
   status = true;
   playlist: Playlist[];
   wavesurfer: WaveSurfer;
+  waveColor = '#97C4D2';
   playStatus = false;
   activeMusic;
   activeMusicId = 0;
