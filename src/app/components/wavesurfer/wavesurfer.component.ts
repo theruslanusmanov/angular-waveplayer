@@ -16,22 +16,61 @@ export class WaveSurferComponent implements OnInit {
 
   constructor() { }
 
-  private onPreviousButton(event) {
+  onPreviousButton(event) {
     this.activeMusicId--;
     this.musicUpdate();
   }
 
-  private onPlayButton(event) {
-    this.playStatus = !this.playStatus;
-    this.wavesurfer.playPause();
+  onPlayButton(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    console.log(this.playStatus);
+    if (this.playStatus === false) {
+      this.playStatus = true;
+      this.wavesurfer.play();
+    } else {
+      this.playStatus = false;
+      this.wavesurfer.pause();
+    }
   }
 
-  private onNextButton(event) {
+  onNextButton(event) {
     this.activeMusicId++;
     this.musicUpdate();
   }
 
-  private musicUpdate() {
+  onPlayerClick(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    console.log(this.playStatus);
+    const time = this.wavesurfer.getDuration();
+    const width = this.getPlayerWidth();
+    const position = event.clientX;
+    const currentTime = this.getCurrentTime(time, width, position);
+
+    if (!this.playStatus) {
+      this.playStatus = true;
+      this.wavesurfer.play(currentTime);
+    } else {
+      this.playStatus = false;
+      this.wavesurfer.pause();
+    }
+
+  }
+
+  getPlayerWidth() {
+    const playerContainer = document.getElementsByClassName('play-controls')[0];
+    return playerContainer.getBoundingClientRect().width;
+  }
+
+  getCurrentTime(time, width, position) {
+    const unitTime = time / 100;
+    const unitWidth = width / 100;
+    const units = position / unitWidth;
+    return unitTime * units;
+  }
+
+  musicUpdate() {
     this.activeMusic = this.playlist[this.activeMusicId];
     this.wavesurfer.load(this.activeMusic.url);
     if (this.playStatus === true) {
@@ -43,6 +82,7 @@ export class WaveSurferComponent implements OnInit {
 
   ngOnInit() {
     this.wavesurfer = this.wavesurfer.create({
+      height: '80',
       container: '.player-container',
       waveColor: '#97C4D2',
       progressColor: '#fff',

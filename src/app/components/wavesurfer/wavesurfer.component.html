@@ -1,4 +1,4 @@
-<div class="play-controls">
+<div class="play-controls" (click)="onPlayerClick($event)">
   <div class="album-box"></div>
   <i class="material-icons" (click)="onPreviousButton($event)">skip_previous</i>
   <i
@@ -11,4 +11,6 @@
 
   <i class="material-icons icon-expand-more">expand_more</i>
 </div>
-<div class="player-container"></div>
+<div class="player-container">
+  <div class="player-overlay"></div>
+</div>
